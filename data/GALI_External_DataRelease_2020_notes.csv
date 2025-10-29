@@ -1,0 +1,15 @@
+"Unless otherwise noted, for any field that is cleaned the cleaning process includes:"
+For numeric and currency fields:
+1) If text is present in a numeric field translate text to numbers as possible.
+2) Remove all other text.
+3) If a numerical range is present the midpoint is calculated.
+"4) For year fields, the earliest year present is selected."
+"5) For currency fields, currency are cleaned to remove excess zeros."
+"6) When necessary for programs that use non-USD currencies, financials are converted to USD using the mid year exchange rate of the application year."
+""
+For fields that contain labeled data
+1) For fields containing labeled data the text is standardized and converted to the appropriate label value
+""
+Selection Information
+"The availability of selection information (selected, showup, and finished) is subject to the program structure and timing of the program partners."
+This release contains the most up-to-date selection information from the partners.

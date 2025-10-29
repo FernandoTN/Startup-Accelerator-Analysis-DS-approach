@@ -1,0 +1,606 @@
+Variable,Description,Question Sample,Data Type,Notes
+program_id,Program ID,Unique ID assigned to each accelerator program,String,
+program_year,Program year,,Numeric,
+program_region,Region (World Bank definition) where the accelerator program took place,"Categorized based on response to: ""Where will (most of) this program be located?""",Categorical,These data were collected with a separate survey of program managers
+program_duration,Duration of the accelerator program,"Calculated based on response to: ""What is this program’s expected dates: (Start Date) / (End Date)""",Ordinal,These data were collected with a separate survey of program managers
+program_sector_focus_yes,"Program has a specific sector focus (1 = Yes, 0 = No)",Does this program have an explicit sector focus?,(Yes / No),These data were collected with a separate survey of program managers
+program_impact_area_yes,"Program has a specific impact area focus (1 = Yes, 0 = No)",Does this program have an explicit impact area focus?,(Yes / No),These data were collected with a separate survey of program managers
+program_curric_struct_yes,"Program uses a structured curriculum (1 = Yes, 0 = No)",Does this program have a structured curriculum that is distributed to participants in written or electronic form?,(Yes / No),These data were collected with a separate survey of program managers
+program_ben_ginv_yes,"Program provides financial grants or investments (1 = Yes, 0 = No)",Will this program provide guaranteed financial grants or investments for some or all program participants; either directly or through a related funding arm?,(Yes / No),These data were collected with a separate survey of program managers
+program_demo_day_yes,"Program features pitch nights or demo days (1 = Yes, 0 = No)",Will this program feature pitch nights or demo days that connect participants to potential investors?,(Yes / No),These data were collected with a separate survey of program managers
+New_External_ID,Venture ID,Unique ID used for external data purposes,String,
+application_year,Survey year,-,Numeric,The year variable anchors all year specific questions
+participated,Indicates ventures that finished the full program,,Numeric,This information was collected directly from accelerator program managers 
+accepted_initial,Indicates ventures that were selected into program,,Numeric,Data available from 2016 onward; collected directly from accelerator program managers
+accepted_final,Indicates ventures that showed up to participate in program when it began,,Numeric,Data available from 2016 onward; collected directly from accelerator program managers
+info_venture_country,Country of operations,"Currently, in which country are your venture's main operations?",Pull down country,
+info_venture_country_hq,Headquarter country,In what country is your venture headquartered? ,Pull down country,
+info_has_website,Has website ,We are interested in the web presence of your venture. Does your venture currently have any of the following? (check all that apply) - An active website?,(Yes / No),Replaced null with 0
+info_has_facebook,Has Facebook page,We are interested in the web presence of your venture. Does your venture currently have any of the following? (check all that apply) - A Facebook page?,(Yes / No),Replaced null with 0 
+info_has_twitter,Has Twitter page,We are interested in the web presence of your venture. Does your venture currently have any of the following? (check all that apply) - A Twitter account?,(Yes / No),Replaced null with 0 
+info_has_linkedin,Has LinkedIn page,We are interested in the web presence of your venture. Does your venture currently have any of the following? (check all that apply) - A Twitter account? - A LinkedIn group or page?,(Yes / No),Replaced null with 0 
+info_founding_year,Year venture founded,In what year was your venture founded?,Numeric,"Data underwent two-step cleaning process: 1) if respondent's info_founding_year > survey_year, we used survey_year as info_founding_year; 2) if respondent's info_founding_year < 1900, it was changed to Null"
+info_legal_status,Legal status of venture,Is your venture a:,Pull down menu select one,
+info_sector,Primary sector,What primary sector is being impacted by your venture's activities? (select one),"Pull down, select one",
+info_financial_goals,Financial goals,What are the financial goals of your venture? (check one),"Pull down, select one",
+info_has_targetmargin,Has specific profit margin,Do you have some specific profit margin in mind?,(Yes / No),
+info_target_margin,Select profit margin range ,What annual profit margins would you be happy achieving on average?,"Pull down menu, select one",
+info_has_socialmotives,Indicates company has social motive,Individuals can also have non-financial motives for launching new ventures. Does your venture have the explicit intent of creating social or environmental impacts?,(Yes / No),
+model_prodmanuf,Operational Model: Production / Manufacturing,What is the current operational model of your venture? (check all that apply) - Production / Manufacturing,(Yes / No),Replaced null with 0
+model_procpack,Operational Model: Processing / Packaging,What is the current operational model of your venture? (check all that apply) - Processing / Packaging,(Yes / No),Replaced null with 0
+model_distribution,Operational Model: Distribution,What is the current operational model of your venture? (check all that apply) - Distribution,(Yes / No),Replaced null with 0
+model_wholretail,Operational Model: Wholesale / Retail,What is the current operational model of your venture? (check all that apply) - Wholesale / Retail,(Yes / No),Replaced null with 0
+model_services,Operational Model: Services,What is the current operational model of your venture? (check all that apply) - Services,(Yes / No),Replaced null with 0
+model_finserv,Operational Model: Financial Services,What is the current operational model of your venture? (check all that apply) - Financial Services,(Yes / No),Replaced null with 0
+model_unsure,Operational Model: Unsure,What is the current operational model of your venture? (check all that apply) - Unsure,(Yes / No),Replaced null with 0
+model_invention_based,Venture is invention based,"Would you say that your venture is invention-based (i.e., a company that builds upon newly-created technology owned by the venture and/or its founders)?","(Yes, No)",Replaced null with 0
+model_has_patents,Have patents,"Whether assigned by an owner or obtained in some other way, does your venture have any of the following? (check all that apply) - Patents",(Yes / No),Replaced null with 0
+model_has_copyrights,Have copyrights,"Whether assigned by an owner or obtained in some other way, does your venture have any of the following? (check all that apply) - Copyrights",(Yes / No),Replaced null with 0
+model_has_trademarks,Have trademarks,"Whether assigned by an owner or obtained in some other way, does your venture have any of the following? (check all that apply) - Trademarks",(Yes / No),Replaced null with 0
+fins_revenues_m1,Revenue in Year t-1,What was your venture's total earned revenue: /  (please do not include any /  philanthropic investments or donations in this /  amount)-in calendar year ${e://Field/yearm1}? ($US),Numeric,"Cleaned - see note, Null value replaced with 0"
+fins_revenues_sincefound,Revenue since founding,What was your venture's total earned revenue: (please do not include any philanthropic investments or donations in this amount) - since founding?,Numeric,"Cleaned - see note, Null value replaced with 0"
+fins_profit_m1,Profit margin in Year t-1,"Profit is the business' income after all expenses and taxes have / been deducted. Roughly speaking, what was your venture's profit / margin (as a percentage of total investment) for calendar year ${e://Field/yearm1}? ","Pull down, select one",
+fins_ft_employees_m1,Number of full time employees in Year t-1,"Not counting founders, on December 31, ${e://Field/yearm1}, how many people worked / for your venture?  /  /  (please exclude contract workers /  who are not on the business' official payroll)-Full-time employees",Numeric,"Cleaned - see note, Null value replaced with 0"
+fins_pt_employees_m1,Number of part time employees,"Not counting founders, on December 31, ${e://Field/yearm1}, how many people worked / for your venture?  /  /  (please exclude contract workers /  who are not on the business' official payroll)-Part-time employees",Numeric,"Cleaned - see note, Null value replaced with 0"
+fins_wages_m1,"Wages, salaries and benefits paid in Year t-1","How much, if any, did your venture pay in wages, salaries, and / benefits to full- and part-time employees in calendar year ${e://Field/yearm1}?  /  /  (please do not include wages, /  salaries, and benefits to contract...-($US)",Numeric,"Cleaned - see note, Null value replaced with 0"
+fins_seasonals_m1,Number of seasonal employees,"In addition to these full-time and part-time employees, how many / seasonal workers and volunteers...-Seasonal employees",Numeric,"Cleaned - see note, Null value replaced with 0"
+fins_volunteers_m1,Number of volunteers,"In addition to these full-time and part-time employees, how many / seasonal workers and volunteers...-Volunteers",Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_ownmoney_m1,Owners investment amount in Year t-1,How much of their own money did all of the founders put into the / business: /  /  (please do not include any money borrowed from others or /  credit cards.)-in calendar year ${e://Field/yearm1}? ($US),Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_ownmoney_sincefound,Owners investment amount since founding,How much of their own money did all of the founders put into the business: (please do not include any money borrowed from others or credit cards.) - since founding?,Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_hasequity,Venture has equity,Please indicate whether your venture has received any of the / following investments from outside s...-Equity (equity investment is money received in return for some portion of ownership),(Yes / No),Replaced null with 0
+inv_hasdebt,Venture has debt,Please indicate whether your venture has received any of the / following investments from outside s...-Debt (not including any personal debt obtained on behalf of the business),(Yes / No),Replaced null with 0
+inv_hasphilan,Venture has philanthropy,"Please indicate whether your venture has received any of the / following investments from outside s...-Philanthropy (e.g., seed grants, awards, or donations)",(Yes / No),Replaced null with 0
+inv_equityfrom_spouses,Equity Source: Spouses of founders,"Equity investment is money received in return for some portion of / ownership. During prior calendar year, did your venture obtain / equity financing from any of the following sources? (check all that / a...-Spouses of founders",(Yes / No),Replaced null with 0
+inv_equityfrom_banks,Equity Source: From banks,From which sources has your venture received this outside equity?-From banks,(Yes / No),Replaced null with 0
+inv_equityfrom_nonbankfin,Equity Source: From non-bank financial institutions,From which sources has your venture received this outside equity?-From non-bank financial institutions,(Yes / No),Replaced null with 0
+inv_equityfrom_parents,Equity Source: Parents of founders,,(Yes / No),Replaced null with 0
+inv_equityfrom_angels,Equity Source: From angel investors,From which sources has your venture received this outside equity?-From angel investors,(Yes / No),Replaced null with 0
+inv_equityfrom_companies,Equity Source: From other companies,From which sources has your venture received this outside equity?-From other companies,(Yes / No),Replaced null with 0
+inv_equityfrom_govt,Equity Source: From government agencies,From which sources has your venture received this outside equity?-From government agencies,(Yes / No),Replaced null with 0
+inv_equityfrom_venturecap,Equity Source: From venture capitalists,From which sources has your venture received this outside equity?-From venture capitalists,(Yes / No),Replaced null with 0
+inv_equityfrom_na,Equity Source: Not applicable (the venture is a nonprofit),,(Yes / No),Replaced null with 0
+inv_equityfrom_nonprofits,Equity Source: From foundations or other nonprofits,From which sources has your venture received this outside equity?-From foundations or other nonprofits,(Yes / No),Replaced null with 0
+inv_equityfrom_accelerators,Equity Source: From accelerators or fellowship programs,From which sources has your venture received this outside equity?-From accelerators or fellowship programs,(Yes / No),Replaced null with 0
+inv_equityfrom_friendsfamily,Equity Source: From friends or family members,From which sources has your venture received this outside equity?-From friends or family members,(Yes / No),Replaced null with 0
+inv_equityfrom_bpcs,Equity Source: From business plan competitions,From which sources has your venture received this outside equity?-From business plan competitions,(Yes / No),Replaced null with 0
+inv_equityfrom_crowd,Equity Source: From crowd-fund campaigns,From which sources has your venture received this outside equity?-From crowd-fund campaigns,(Yes / No),Replaced null with 0
+inv_equityfrom_nonowneremp,Equity Source: From employees that are not owners,From which sources has your venture received this outside equity?-From employees that are not owners,(Yes / No),Replaced null with 0
+inv_equityfrom_otherinds,Equity Source: From other individuals,From which sources has your venture received this outside equity?-From other individuals,(Yes / No),Replaced null with 0
+inv_equityfrom_other,Equity Source: From another source,From which sources has your venture received this outside equity?-From another source,(Yes / No),Replaced null with 0
+inv_outequity_m1,Equity financing in Year t - 1,How much equity financing did your venture obtain from all outside sources: - in calendar year ${e://Field/yearm1}?,Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_outequity_sincefound,Equity financing since founding,How much equity financing did your venture obtain from all outside sources: - since founding?,Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_debtfrom_banks,Debt Source: From banks,From which sources has your venture obtained borrowed funds? - From banks,(Yes / No),Replaced null with 0
+inv_debtfrom_nonbankfin,Debt Source: From non-bank financial institutions,From which sources has your venture obtained borrowed funds? - From non-bank financial institutions,(Yes / No),Replaced null with 0
+inv_debtfrom_venturecap,Debt Source: From venture capitalists,From which sources has your venture obtained borrowed funds?-From venture capitalists,(Yes / No),Replaced null with 0
+inv_debtfrom_angels,Debt Source: From angel investors,From which sources has your venture obtained borrowed funds?-From angel investors,(Yes / No),Replaced null with 0
+inv_debtfrom_govt,Debt Source: From government agencies,From which sources has your venture obtained borrowed funds? - From government agencies,(Yes / No),Replaced null with 0
+inv_debtfrom_companies,Debt Source: From other companies,From which sources has your venture obtained borrowed funds? - From other companies,(Yes / No),Replaced null with 0
+inv_debtfrom_nonprofits,Debt Source: From foundations or other nonprofits,From which sources has your venture obtained borrowed funds?-From foundations or other nonprofits,(Yes / No),Replaced null with 0
+inv_debtfrom_accelerators,Debt Source: From accelerators or fellowship programs,From which sources has your venture obtained borrowed funds?-From accelerators or fellowship programs,(Yes / No),Replaced null with 0
+inv_debtfrom_family,Debt Source: From family members,"Not including any personal debt obtained on behalf of the / business, did your venture obtain debt financing from any of the / following sources in prior calendar year? (check all that apply)-From family members",(Yes / No),Replaced null with 0
+inv_debtfrom_friendsfamily,Debt Source: From friends or family members,From which sources has your venture obtained borrowed funds?-From friends or family members,(Yes / No),Replaced null with 0
+inv_debtfrom_bpcs,Debt Source: From business plan competitions,From which sources has your venture obtained borrowed funds?-From business plan competitions,(Yes / No),Replaced null with 0
+inv_debtfrom_crowd,Debt Source: From crowd-fund campaigns,From which sources has your venture obtained borrowed funds?-From crowd-fund campaigns,(Yes / No),Replaced null with 0
+inv_debtfrom_nonowneremp,Debt Source: From employees that are not owners,From which sources has your venture obtained borrowed funds? - From employees that are not owners,(Yes / No),Replaced null with 0
+inv_debtfrom_otherinds,Debt Source: From other individuals,From which sources has your venture obtained borrowed funds? - From other individuals,(Yes / No),Replaced null with 0
+inv_debtfrom_other,Debt Source: From another source,From which sources has your venture obtained borrowed funds? - From another source,(Yes / No),Replaced null with 0
+inv_totaldebt_m1,Debt borrowed in Year t - 1,How much did your venture borrow from all of these sources: /  /  ($US)-in calendar year ${e://Field/yearm1}? ($US),Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_totaldebt_sincefound,Debt borrowed since founding,How much did your venture borrow from all sources: - since founding?,Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_hasconvdebt,Has convertible debt,"Was any portion of this debt ""convertible debt""?",(Yes / No),
+inv_philanfrom_companies,Philanthropic Source: From other companies,From which sources has your venture received these donations?-From other companies,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_govt,Philanthropic Source: From government agencies,From which sources has your venture received these donations?-From government agencies,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_nonprofits,Philanthropic Source: From foundations or other nonprofits,From which sources has your venture received these donations?-From foundations or other nonprofits,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_accelerators,Philanthropic Source: From accelerators or fellowship programs,From which sources has your venture received these donations?-From accelerators or fellowship programs,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_friendsfamily,Philanthropic Source: From friends or family members,From which sources has your venture received these donations?-From friends or family members,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_bpcs,Philanthropic Source: From business plan competitions,From which sources has your venture received these donations?-From business plan competitions,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_crowd,Philanthropic Source: From crowd-fund campaigns,From which sources has your venture received these donations?-From crowd-fund campaigns,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_nonowneremp,Philanthropic Source: From employees that are not owners,From which sources has your venture received these donations?-From employees that are not owners,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_otherinds,Philanthropic Source: From other individuals,From which sources has your venture received these donations?-From other individuals,"(Yes, blank = No)",Replaced null with 0
+inv_philanfrom_anothersource,Philanthropic Source: From another source,From which sources has your venture received these donations?-From another source,"(Yes, blank = No)",Replaced null with 0
+inv_philan_m1,Philanthropic support in Year t - 1,"How much philanthropic support (e.g., seed grants, awards, or / donations) did your venture receive from all outside sources: /  /  ($US)-in calendar year ${e://Field/yearm1}? ($US)",Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_philan_sincefound,Philanthropic support since founding,How much philanthropic support did your venture receive from all outside sources: - since founding?,Numeric,"Cleaned - see note, Null value replaced with 0"
+inv_plans_outequity_12months,Additional equity in the next 12 months,How much additional investment are you planning to secure for your venture: Equity Financing Over the next 12 months?,Numeric,Cleaned - see note
+inv_plans_debt_12months,Additional debt in the next 12 months,How much additional investment are you planning to secure for your venture: Debt Financing Over the next 12 months?,Numeric,Cleaned - see note
+inv_plans_philan_12months,Additional philanthropy in the next 12 months,How much additional investment are you planning to secure for your venture: Philanthropic Support Over the next 12 months?,Numeric,Cleaned - see note
+inv_plans_outequity_3years,Additional equity in the next 3 years,How much additional investment are you planning to secure for your venture: Equity Financing Over the next three years?,Numeric,Cleaned - see note
+inv_plans_debt_3years,Additional debt in the next 3 years,How much additional investment are you planning to secure for your venture: Debt Financing Over the next three years?,Numeric,Cleaned - see note
+inv_plans_philan_3years,Additional philanthropy in the next 3 years,How much additional investment are you planning to secure for your venture: Philanthropic Support Over the next three years?,Numeric,Cleaned - see note
+found_name1_present,Value indicates when a name was entered into Founder_name1 field,Calculated field,(Yes / No),Calculated: 1 if Founder 1 Name Present
+found_name2_present,Value indicates when a name was entered into Founder_name2 field,Calculated field,(Yes / No),Calculated: 1 if Founder 2 Name Present
+found_name3_present,Value indicates when a name was entered into Founder_name3 field,Calculated field,(Yes / No),Calculated: 1 if Founder 3 Name Present
+found_additional_cnt,Number of additional founders,How many additional people (not listed above) are also on the founding team?,Numeric,"Cleaned - see note, Null value replaced with 0"
+found_name1_age,Founder 1 age,"Now, please provide the following information about each of the three founders listed above: - Founder 1 Age",Numeric,"Data underwent two-step cleaning process: 1) if respondent's age > 1000, assumed response was birth year and subtracted from survey_year to calculate founder's age; 2) if respondent's age < 18 or > 100, it was changed to Null"
+found_name2_age,Founder 2 age,"Now, please provide the following information about each of the three founders listed above: - Founder 2 Age",Numeric,Cleaned - see note
+found_name3_age,Founder 3 age,"Now, please provide the following information about each of the three founders listed above: - Founder 3 Age",Numeric,Cleaned - see note
+found_name1_gender,Founder 1 gender,"Now, please provide the following information about each of the three founders listed above: - Founder 1 Gender","(Male, Female)",
+found_name2_gender,Founder 2 gender,"Now, please provide the following information about each of the three founders listed above: - Founder 2 Gender","(Male, Female)",
+found_name3_gender,Founder 3 gender,"Now, please provide the following information about each of the three founders listed above: - Founder 3 Gender","(Male, Female)",
+found_name1_born,Founder 1 country of birth,"Now, please provide the following information about each of the three founders listed above: - Founder 1 Country of Birth",Country Code,Cleaned - see note
+found_name2_born,Founder 2 country of birth,"Now, please provide the following information about each of the three founders listed above: - Founder 2 Country of Birth",Country Code,Cleaned - see note
+found_name3_born,Founder 3 country of birth,"Now, please provide the following information about each of the three founders listed above: - Founder 3 Country of Birth",Country Code,Cleaned - see note
+found_name1_resides,Founder 1 country of current residence,"Now, please provide the following information about each of the three founders listed above: - Founder 1 Country of Current Residence",Country Code,Cleaned - see note
+found_name2_resides,Founder 2 country of current residence,"Now, please provide the following information about each of the three founders listed above: - Founder 2 Country of Current Residence",Country Code,Cleaned - see note
+found_name3_resides,Founder 3 country of current residence,"Now, please provide the following information about each of the three founders listed above: - Founder 3 Country of Current Residence",Country Code,Cleaned - see note
+found_name1_education,Founder 1 highest level of education completed,"Now, please provide the following information about each of the three founders listed above: - Founder 1 Highest Level of Education Completed",Pull down ,Cleaned - see note
+found_name2_education,Founder 2 highest level of education completed,"Now, please provide the following information about each of the three founders listed above: - Founder 2 Highest Level of Education Completed",Pull down ,Cleaned - see note
+found_name3_education,Founder 3 highest level of education completed,"Now, please provide the following information about each of the three founders listed above: - Founder 3 Highest Level of Education Completed",Pull down ,Cleaned - see note
+found_name1_prior_fp,Founder 1 for-profits,How many new organizations did each founder start before launching this venture? - Founder 1 For-Profits,Numeric,Cleaned - see note
+found_name2_prior_fp,Founder 2 for-profits,How many new organizations did each founder start before launching this venture? - Founder 2 For-Profits,Numeric,Cleaned - see note
+found_name3_prior_fp,Founder 3 for-profits,How many new organizations did each founder start before launching this venture? - Founder 3 For-Profits,Numeric,Cleaned - see note
+found_name1_prior_other,Founder 1 other entities,How many new organizations did each founder start before launching this venture? - Founder 1 Other Entities,Numeric,Cleaned - see note
+found_name2_prior_other,Founder 2 other entities,How many new organizations did each founder start before launching this venture? - Founder 2 Other Entities,Numeric,Cleaned - see note
+found_name3_prior_other,Founder 3 other entities,How many new organizations did each founder start before launching this venture? - Founder 3 Other Entities,Numeric,Cleaned - see note
+found_name1_prior_np,Founder 1 nonprofits,How many new organizations did each founder start before launching this venture? - Founder 1 Nonprofits,Numeric,Cleaned - see note
+found_name2_prior_np,Founder 2 nonprofits,How many new organizations did each founder start before launching this venture? - Founder 2 Nonprofits,Numeric,Cleaned - see note
+found_name3_prior_np,Founder 3 nonprofits,How many new organizations did each founder start before launching this venture? - Founder 3 Nonprofits,Numeric,Cleaned - see note
+found_name1_job1_orgtype,"Organization type: Founder 1, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder1.Job1 Organization Type?,"Pull down, select one",
+found_name1_job2_orgtype,"Organization type: Founder 1, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder1.Job2 Organization Type?,"Pull down, select one",
+found_name2_job1_orgtype,"Organization type: Founder 2, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job1 Organization Type?,"Pull down, select one",
+found_name2_job2_orgtype,"Organization type: Founder 2, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job2 Organization Type?,"Pull down, select one",
+found_name3_job1_orgtype,"Organization type: Founder 3, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job1 Organization Type?,"Pull down, select one",
+found_name3_job2_orgtype,"Organization type: Founder 3, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job2 Organization Type?,"Pull down, select one",
+found_name1_job1_role,"Role: Founder 1, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture.  Founder1.Job1 What Role?,"Pull down, select one",
+found_name1_job2_role,"Role: Founder 1, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder1.Job2 What Role?,"Pull down, select one",
+found_name2_job1_role,"Role: Founder 2, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job1 What Role?,"Pull down, select one",
+found_name2_job2_role,"Role: Founder 2, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job2 What Role?,"Pull down, select one",
+found_name3_job1_role,"Role: Founder 3, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job1 What Role?,"Pull down, select one",
+found_name3_job2_role,"Role: Founder 3, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job2 What Role?,"Pull down, select one",
+found_name1_job1_tenure,"Tenure: Founder 1, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder1.Job1 How Long?,Numeric,Numerical values cleaned
+found_name1_job2_tenure,"Tenure: Founder 1, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder1.Job2 How Long?,Numeric,Numerical values cleaned
+found_name2_job1_tenure,"Tenure: Founder 2, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job1 How Long?,Numeric,Numerical values cleaned
+found_name2_job2_tenure,"Tenure: Founder 2, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job2 How Long?,Numeric,Numerical values cleaned
+found_name3_job1_tenure,"Tenure: Founder 3, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job1 How Long?,Numeric,Numerical values cleaned
+found_name3_job2_tenure,"Tenure: Founder 3, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job2 How Long?,Numeric,Numerical values cleaned
+found_name1_job1_country,"Country: Founder 1, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder1.Job1 Country?,Country Code,Text fields cleaned and country code assigned
+found_name1_job2_country,"Country: Founder 1, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder1.Job2 Country?,Country Code,Text fields cleaned and country code assigned
+found_name2_job1_country,"Country: Founder 2, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job1 Country?,Country Code,Text fields cleaned and country code assigned
+found_name2_job2_country,"Country: Founder 2, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder2.Job2 Country?,Country Code,Text fields cleaned and country code assigned
+found_name3_job1_country,"Country: Founder 3, job 1",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job1 Country?,Country Code,Text fields cleaned and country code assigned
+found_name3_job2_country,"Country: Founder 3, job 2",Please provide the following information about the two most recent paid full-time jobs held by each of the above founders before launching this venture. Founder3.Job2 Country?,Country Code,Text fields cleaned and country code assigned
+impact_area_water,Impact area: Access to clean water,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Access to clean water,(Yes / No),Replaced null with 0
+impact_area_educ,Impact area: Access to education,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Access to education,(Yes / No),Replaced null with 0
+impact_area_energy,Impact area: Access to energy,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Access to energy,(Yes / No),Replaced null with 0
+impact_area_finsrv,Impact area: Access to financial services,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Access to financial services,(Yes / No),Replaced null with 0
+impact_area_information,Impact area: Access to information,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Access to information,(Yes / No),Replaced null with 0
+impact_area_housing,Impact area: Affordable housing,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Affordable housing,(Yes / No),Replaced null with 0
+impact_area_agprod,Impact area: Agriculture productivity,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Agriculture productivity,(Yes / No),Replaced null with 0
+impact_area_biodiv,Impact area: Biodiversity conservation,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Biodiversity conservation,(Yes / No),"Replaced null with 0; data from 2015-2019, replaced impact_area_natbio in 2015"
+impact_area_capacity,Impact area: Capacity building,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Capacity building,(Yes / No),Replaced null with 0
+impact_area_commdev,Impact area: Community development,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Community development,(Yes / No),Replaced null with 0
+impact_area_conflres,Impact area: Conflict Resolution,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Conflict Resolution,(Yes / No),Replaced null with 0; data from 2015-2019
+impact_area_disease,Impact area: Disease-specific prevention and mitigation,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Disease-specific prevention and mitigation,(Yes / No),Replaced null with 0
+impact_area_employ,Impact area: Employment generation,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Employment generation,(Yes / No),Replaced null with 0
+impact_area_fueleff,Impact area: Energy and fuel efficiency,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Energy and fuel efficiency,(Yes / No),"Replaced null with 0; data from 2015-2019, replaced impact_area_efficiency in 2015"
+impact_area_equality,Impact area: Equality and empowerment,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Equality and empowerment,(Yes / No),Replaced null with 0
+impact_area_food,Impact area: Food security,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Food security,(Yes / No),Replaced null with 0
+impact_area_charity,Impact area: Generate funds for charitable giving,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Generate funds for charitable giving,(Yes / No),Replaced null with 0
+impact_area_health,Impact area: Health improvement,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Health improvement,(Yes / No),Replaced null with 0
+impact_area_humrights,Impact area: Human rights protection or expansion,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Human rights protection or expansion,(Yes / No),Replaced null with 0; data from 2015-2019
+impact_area_incgrowth,Impact area: Income/productivity growth,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Income/productivity growth,(Yes / No),Replaced null with 0
+impact_area_natresources,Impact area: Natural resources conservation,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Natural resources conservation,(Yes / No),"Replaced null with 0; data from 2015-2019, replaced impact_area_natbio in 2015"
+impact_area_natbio,Impact area: Natural resources/biodiversity,Which of the following impact objectives does your venture / currently seek to address? (check up to three)-Natural resources/biodiversity,(Yes / No),"Replaced null with 0; data from 2013-2014, split into separate variables impact_area_natresources and impact_area_biodiv in 2015"
+impact_area_wastemgt,Impact area: Pollution prevention and waste management,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Pollution prevention and waste management,(Yes / No),Replaced null with 0
+impact_area_efficiency,Impact area: Sustainable energy/fuel efficiency,Which of the following impact objectives does your venture / currently seek to address? (check up to three)-Sustainable energy/fuel efficiency,(Yes / No),"Replaced null with 0; data from 2013-2014, split into separate variables impact_area_fueleff and impact_area_sustenergy in 2015"
+impact_area_sustenergy,Impact area: Sustainable energy,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Sustainable energy,(Yes / No),"Replaced null with 0; data from 2015-2019, replaced impact_area_efficiency in 2015"
+impact_area_landuse,Impact area: Sustainable land use,Which of the following impact objectives does your venture / currently seek to address? (check up to three)-Sustainable land use,(Yes / No),Replaced null with 0
+impact_area_highimpact,Impact area: Support for high-impact entrepreneurs,Which of the following impact objectives does your venture / currently seek to address? (check up to three)-Support for high-impact entrepreneurs,(Yes / No),"Replaced null with 0; data from 2013-2014, discontinued in 2015"
+impact_area_watresmgmt,Impact area: Water resources management,Which of the following impact objectives does your venture / currently seek to address? (check up t...-Water resources management,(Yes / No),Replaced null with 0; data from 2015-2019
+impact_area_womengirls,Impact area: Support for women and girls,Which of the following impact objectives does your venture / currently seek to address? (check up to three)-Support for women and girls,(Yes / No),Replaced null with 0; data from 2014-2019
+impact_area_other,Impact area: Other,Which of the following impact objectives does your venture currently seek to address? (check up to three) - Other,(Yes / No),Replaced null with 0
+impact_demog_group,Demographic group impacted,What is the demographic group of the primary beneficiaries targeted by your venture's activities? (select one),"Pull down, select one",
+impact_socioecon_group,Socioeconomic group impacted,What are the socioeconomic groups of the primary beneficiaries / targeted by your venture's operations? (select one),"Pull down, select one",
+impact_use_iris,Venture uses IRIS measures,Does your venture regularly track itself against any of the Impact Reporting Investment Standards (IRIS) impact measures?,"(Yes, No)",
+impact_use_blab_giirs,Venture uses GIIRS measures,Has your venture ever taken a B Impact Assessment or Global Impact Investing Ratings System (GIIRS) Survey?,"(Yes, No)",
+impact_use_othermeasure,Venture uses another measurement approach,Does your venture regularly track its impacts using any other established measurement approaches?,"(Yes, No)",
+accel_ben_rank_network,"Accelerator Benefit:  Network development (e.g., with potential partners and customers)","The following are some of the potential benefits that are typically associated with entrepreneurial accelerators. Please rank these benefits in terms of how important they are to your venture's development and success. - Network development (e.g., with potential partners and customers)",Ranking from 1 to 7,
+accel_ben_rank_business_skills,"Accelerator Benefit:  Business skills development (e.g., with potential partners and customers)","The following are some of the potential benefits that are typically associated with entrepreneurial accelerators. Please rank these benefits in terms of how important they are to your venture's development and success (1 being the most important and 7 being the least important): Business skills development (e.g., with potential partners and customers)",Ranking from 1 to 7,
+accel_ben_rank_mentorship,Accelerator Benefit:  Mentorship from business experts,The following are some of the potential benefits that are typically associated with entrepreneurial accelerators. Please rank these benefits in terms of how important they are to your venture's development and success (1 being the most important and 7 being the least important): Mentorship from business experts,Ranking from 1 to 7,
+accel_ben_rank_access_investors,Accelerator Benefit:  Access and connections to potential investors/funders,The following are some of the potential benefits that are typically associated with entrepreneurial accelerators. Please rank these benefits in terms of how important they are to your venture's development and success (1 being the most important and 7 being the least important): Access and connections to potential investors/funders,Ranking from 1 to 7,
+accel_ben_rank_direct_funding,"Accelerator Benefit:  Securing direct venture funding (e.g., grants or investments)","The following are some of the potential benefits that are typically associated with entrepreneurial accelerators. Please rank these benefits in terms of how important they are to your venture's development and success (1 being the most important and 7 being the least important): Securing direct venture funding (e.g., grants or investments)",Ranking from 1 to 7,
+accel_ben_rank_access_entreprene,Accelerator Benefit:  Gaining access to a group of like-minded entrepreneurs,The following are some of the potential benefits that are typically associated with entrepreneurial accelerators. Please rank these benefits in terms of how important they are to your venture's development and success (1 being the most important and 7 being the least important): Gaining access to a group of like-minded entrepreneurs,Ranking from 1 to 7,
+accel_ben_rank_aware_cred,"Accelerator Benefit:  Awareness and credibility (e.g., association with a recognized program, press/media exposure)","The following are some of the potential benefits that are typically associated with entrepreneurial accelerators. Please rank these benefits in terms of how important they are to your venture's development and success (1 being the most important and 7 being the least important): Awareness and credibility (e.g., association with a recognized program, press/media exposure)",Ranking from 1 to 7,
+report_any_prior_accelerator,Value indicates whether founders participated in any prior accelerator programs,Calculated field,(Yes / No),Calculated from individual accelerator attendance variables.  
+fu1-report_followup_yes,"Binary variable indicating the availability of first-year followup data (1 = Yes, 0 = No)",,,
+fu1-New_External_ID,Refer to the definition of New_External_ID,,,
+fu1-program_id,Refer to the definition of program_id,,,
+fu1-program_year,Refer to the definition of program_year,,,
+fu1-info_venture_country,Refer to the definition of info_venture_country,,,
+fu1-info_legal_status,Refer to the definition of info_legal_status,,,
+fu1-info_financial_goals,Refer to the definition of info_financial_goals,,,
+fu1-info_has_targetmargin,Refer to the definition of info_has_targetmargin,,,
+fu1-info_target_margin,Refer to the definition of info_target_margin,,,
+fu1-info_has_socialmotives,Refer to the definition of info_has_socialmotives,,,
+fu1-fins_revenues_m1,Refer to the definition of fins_revenues_m1,,,
+fu1-fins_profit_m1,Refer to the definition of fins_profit_m1,,,
+fu1-fins_ft_employees_m1,Refer to the definition of fins_ft_employees_m1,,,
+fu1-fins_pt_employees_m1,Refer to the definition of fins_pt_employees_m1,,,
+fu1-fins_wages_m1,Refer to the definition of fins_wages_m1,,,
+fu1-inv_ownmoney_m1,Refer to the definition of inv_ownmoney_m1,,,
+fu1-inv_equityfrom_spouses,Refer to the definition of inv_equityfrom_spouses,,,
+fu1-inv_equityfrom_banks,Refer to the definition of inv_equityfrom_banks,,,
+fu1-inv_equityfrom_nonbankfin,Refer to the definition of inv_equityfrom_nonbankfin,,,
+fu1-inv_equityfrom_parents,Refer to the definition of inv_equityfrom_parents,,,
+fu1-inv_equityfrom_angels,Refer to the definition of inv_equityfrom_angels,,,
+fu1-inv_equityfrom_companies,Refer to the definition of inv_equityfrom_companies,,,
+fu1-inv_equityfrom_govt,Refer to the definition of inv_equityfrom_govt,,,
+fu1-inv_equityfrom_venturecap,Refer to the definition of inv_equityfrom_venturecap,,,
+fu1-inv_equityfrom_na,Refer to the definition of inv_equityfrom_na,,,
+fu1-inv_equityfrom_nonprofits,Refer to the definition of inv_equityfrom_nonprofits,,,
+fu1-inv_equityfrom_accelerators,Refer to the definition of inv_equityfrom_accelerators,,,
+fu1-inv_equityfrom_friendsfamily,Refer to the definition of inv_equityfrom_friendsfamily,,,
+fu1-inv_equityfrom_bpcs,Refer to the definition of inv_equityfrom_bpcs,,,
+fu1-inv_equityfrom_crowd,Refer to the definition of inv_equityfrom_crowd,,,
+fu1-inv_equityfrom_nonowneremp,Refer to the definition of inv_equityfrom_nonowneremp,,,
+fu1-inv_equityfrom_otherinds,Refer to the definition of inv_equityfrom_otherinds,,,
+fu1-inv_equityfrom_other,Refer to the definition of inv_equityfrom_other,,,
+fu1-inv_outequity_m1,Refer to the definition of inv_outequity_m1,,,
+fu1-inv_debtfrom_banks,Refer to the definition of inv_debtfrom_banks,,,
+fu1-inv_debtfrom_nonbankfin,Refer to the definition of inv_debtfrom_nonbankfin,,,
+fu1-inv_debtfrom_venturecap,Refer to the definition of inv_debtfrom_venturecap,,,
+fu1-inv_debtfrom_angels,Refer to the definition of inv_debtfrom_angels,,,
+fu1-inv_debtfrom_govt,Refer to the definition of inv_debtfrom_govt,,,
+fu1-inv_debtfrom_companies,Refer to the definition of inv_debtfrom_companies,,,
+fu1-inv_debtfrom_nonprofits,Refer to the definition of inv_debtfrom_nonprofits,,,
+fu1-inv_debtfrom_accelerators,Refer to the definition of inv_debtfrom_accelerators,,,
+fu1-inv_debtfrom_family,Refer to the definition of inv_debtfrom_family,,,
+fu1-inv_debtfrom_friendsfamily,Refer to the definition of inv_debtfrom_friendsfamily,,,
+fu1-inv_debtfrom_bpcs,Refer to the definition of inv_debtfrom_bpcs,,,
+fu1-inv_debtfrom_crowd,Refer to the definition of inv_debtfrom_crowd,,,
+fu1-inv_debtfrom_nonowneremp,Refer to the definition of inv_debtfrom_nonowneremp,,,
+fu1-inv_debtfrom_otherinds,Refer to the definition of inv_debtfrom_otherinds,,,
+fu1-inv_debtfrom_other,Refer to the definition of inv_debtfrom_other,,,
+fu1-inv_totaldebt_m1,Refer to the definition of inv_totaldebt_m1,,,
+fu1-inv_philanfrom_companies,Refer to the definition of inv_philanfrom_companies,,,
+fu1-inv_philanfrom_govt,Refer to the definition of inv_philanfrom_govt,,,
+fu1-inv_philanfrom_nonprofits,Refer to the definition of inv_philanfrom_nonprofits,,,
+fu1-inv_philanfrom_accelerators,Refer to the definition of inv_philanfrom_accelerators,,,
+fu1-inv_philanfrom_friendsfamily,Refer to the definition of inv_philanfrom_friendsfamily,,,
+fu1-inv_philanfrom_bpcs,Refer to the definition of inv_philanfrom_bpcs,,,
+fu1-inv_philanfrom_crowd,Refer to the definition of inv_philanfrom_crowd,,,
+fu1-inv_philanfrom_nonowneremp,Refer to the definition of inv_philanfrom_nonowneremp,,,
+fu1-inv_philanfrom_otherinds,Refer to the definition of inv_philanfrom_otherinds,,,
+fu1-inv_philanfrom_anothersource,Refer to the definition of inv_philanfrom_anothersource,,,
+fu1-inv_philan_m1,Refer to the definition of inv_philan_m1,,,
+fu1-inv_plans_outequity_12months,Refer to the definition of inv_plans_outequity_12months,,,
+fu1-inv_plans_debt_12months,Refer to the definition of inv_plans_debt_12months,,,
+fu1-inv_plans_philan_12months,Refer to the definition of inv_plans_philan_12months,,,
+fu1-inv_plans_outequity_3years,Refer to the definition of inv_plans_outequity_3years,,,
+fu1-inv_plans_debt_3years,Refer to the definition of inv_plans_debt_3years,,,
+fu1-inv_plans_philan_3years,Refer to the definition of inv_plans_philan_3years,,,
+fu1-impact_area_water,Refer to the definition of impact_area_water,,,
+fu1-impact_area_educ,Refer to the definition of impact_area_educ,,,
+fu1-impact_area_energy,Refer to the definition of impact_area_energy,,,
+fu1-impact_area_finsrv,Refer to the definition of impact_area_finsrv,,,
+fu1-impact_area_information,Refer to the definition of impact_area_information,,,
+fu1-impact_area_housing,Refer to the definition of impact_area_housing,,,
+fu1-impact_area_agprod,Refer to the definition of impact_area_agprod,,,
+fu1-impact_area_biodiv,Refer to the definition of impact_area_biodiv,,,
+fu1-impact_area_capacity,Refer to the definition of impact_area_capacity,,,
+fu1-impact_area_commdev,Refer to the definition of impact_area_commdev,,,
+fu1-impact_area_conflres,Refer to the definition of impact_area_conflres,,,
+fu1-impact_area_disease,Refer to the definition of impact_area_disease,,,
+fu1-impact_area_employ,Refer to the definition of impact_area_employ,,,
+fu1-impact_area_fueleff,Refer to the definition of impact_area_fueleff,,,
+fu1-impact_area_equality,Refer to the definition of impact_area_equality,,,
+fu1-impact_area_food,Refer to the definition of impact_area_food,,,
+fu1-impact_area_charity,Refer to the definition of impact_area_charity,,,
+fu1-impact_area_health,Refer to the definition of impact_area_health,,,
+fu1-impact_area_humrights,Refer to the definition of impact_area_humrights,,,
+fu1-impact_area_incgrowth,Refer to the definition of impact_area_incgrowth,,,
+fu1-impact_area_natresources,Refer to the definition of impact_area_natresources,,,
+fu1-impact_area_natbio,Refer to the definition of impact_area_natbio,,,
+fu1-impact_area_wastemgt,Refer to the definition of impact_area_wastemgt,,,
+fu1-impact_area_efficiency,Refer to the definition of impact_area_efficiency,,,
+fu1-impact_area_sustenergy,Refer to the definition of impact_area_sustenergy,,,
+fu1-impact_area_landuse,Refer to the definition of impact_area_landuse,,,
+fu1-impact_area_highimpact,Refer to the definition of impact_area_highimpact,,,
+fu1-impact_area_watresmgmt,Refer to the definition of impact_area_watresmgmt,,,
+fu1-impact_area_womengirls,Refer to the definition of impact_area_womengirls,,,
+fu1-impact_area_other,Refer to the definition of impact_area_other,,,
+fu1-impact_use_iris,Refer to the definition of impact_use_iris,,,
+fu1-impact_use_blab_giirs,Refer to the definition of impact_use_blab_giirs,,,
+fu1-impact_use_othermeasure,Refer to the definition of impact_use_othermeasure,,,
+fu1-report_any_prior_accelerator,Refer to the definition of report_any_prior_accelerator,,,
+fu2-report_followup_yes,"Binary variable indicating the availability of second-year followup data (1 = Yes, 0 = No)",,,
+fu2-New_External_ID,Refer to the definition of New_External_ID,,,
+fu2-program_id,Refer to the definition of program_id,,,
+fu2-program_year,Refer to the definition of program_year,,,
+fu2-info_venture_country,Refer to the definition of info_venture_country,,,
+fu2-info_legal_status,Refer to the definition of info_legal_status,,,
+fu2-info_financial_goals,Refer to the definition of info_financial_goals,,,
+fu2-info_has_targetmargin,Refer to the definition of info_has_targetmargin,,,
+fu2-info_target_margin,Refer to the definition of info_target_margin,,,
+fu2-info_has_socialmotives,Refer to the definition of info_has_socialmotives,,,
+fu2-fins_revenues_m1,Refer to the definition of fins_revenues_m1,,,
+fu2-fins_profit_m1,Refer to the definition of fins_profit_m1,,,
+fu2-fins_ft_employees_m1,Refer to the definition of fins_ft_employees_m1,,,
+fu2-fins_pt_employees_m1,Refer to the definition of fins_pt_employees_m1,,,
+fu2-fins_wages_m1,Refer to the definition of fins_wages_m1,,,
+fu2-inv_ownmoney_m1,Refer to the definition of inv_ownmoney_m1,,,
+fu2-inv_equityfrom_spouses,Refer to the definition of inv_equityfrom_spouses,,,
+fu2-inv_equityfrom_banks,Refer to the definition of inv_equityfrom_banks,,,
+fu2-inv_equityfrom_nonbankfin,Refer to the definition of inv_equityfrom_nonbankfin,,,
+fu2-inv_equityfrom_parents,Refer to the definition of inv_equityfrom_parents,,,
+fu2-inv_equityfrom_angels,Refer to the definition of inv_equityfrom_angels,,,
+fu2-inv_equityfrom_companies,Refer to the definition of inv_equityfrom_companies,,,
+fu2-inv_equityfrom_govt,Refer to the definition of inv_equityfrom_govt,,,
+fu2-inv_equityfrom_venturecap,Refer to the definition of inv_equityfrom_venturecap,,,
+fu2-inv_equityfrom_na,Refer to the definition of inv_equityfrom_na,,,
+fu2-inv_equityfrom_nonprofits,Refer to the definition of inv_equityfrom_nonprofits,,,
+fu2-inv_equityfrom_accelerators,Refer to the definition of inv_equityfrom_accelerators,,,
+fu2-inv_equityfrom_friendsfamily,Refer to the definition of inv_equityfrom_friendsfamily,,,
+fu2-inv_equityfrom_bpcs,Refer to the definition of inv_equityfrom_bpcs,,,
+fu2-inv_equityfrom_crowd,Refer to the definition of inv_equityfrom_crowd,,,
+fu2-inv_equityfrom_nonowneremp,Refer to the definition of inv_equityfrom_nonowneremp,,,
+fu2-inv_equityfrom_otherinds,Refer to the definition of inv_equityfrom_otherinds,,,
+fu2-inv_equityfrom_other,Refer to the definition of inv_equityfrom_other,,,
+fu2-inv_outequity_m1,Refer to the definition of inv_outequity_m1,,,
+fu2-inv_debtfrom_banks,Refer to the definition of inv_debtfrom_banks,,,
+fu2-inv_debtfrom_nonbankfin,Refer to the definition of inv_debtfrom_nonbankfin,,,
+fu2-inv_debtfrom_venturecap,Refer to the definition of inv_debtfrom_venturecap,,,
+fu2-inv_debtfrom_angels,Refer to the definition of inv_debtfrom_angels,,,
+fu2-inv_debtfrom_govt,Refer to the definition of inv_debtfrom_govt,,,
+fu2-inv_debtfrom_companies,Refer to the definition of inv_debtfrom_companies,,,
+fu2-inv_debtfrom_nonprofits,Refer to the definition of inv_debtfrom_nonprofits,,,
+fu2-inv_debtfrom_accelerators,Refer to the definition of inv_debtfrom_accelerators,,,
+fu2-inv_debtfrom_family,Refer to the definition of inv_debtfrom_family,,,
+fu2-inv_debtfrom_friendsfamily,Refer to the definition of inv_debtfrom_friendsfamily,,,
+fu2-inv_debtfrom_bpcs,Refer to the definition of inv_debtfrom_bpcs,,,
+fu2-inv_debtfrom_crowd,Refer to the definition of inv_debtfrom_crowd,,,
+fu2-inv_debtfrom_nonowneremp,Refer to the definition of inv_debtfrom_nonowneremp,,,
+fu2-inv_debtfrom_otherinds,Refer to the definition of inv_debtfrom_otherinds,,,
+fu2-inv_debtfrom_other,Refer to the definition of inv_debtfrom_other,,,
+fu2-inv_totaldebt_m1,Refer to the definition of inv_totaldebt_m1,,,
+fu2-inv_philanfrom_companies,Refer to the definition of inv_philanfrom_companies,,,
+fu2-inv_philanfrom_govt,Refer to the definition of inv_philanfrom_govt,,,
+fu2-inv_philanfrom_nonprofits,Refer to the definition of inv_philanfrom_nonprofits,,,
+fu2-inv_philanfrom_accelerators,Refer to the definition of inv_philanfrom_accelerators,,,
+fu2-inv_philanfrom_friendsfamily,Refer to the definition of inv_philanfrom_friendsfamily,,,
+fu2-inv_philanfrom_bpcs,Refer to the definition of inv_philanfrom_bpcs,,,
+fu2-inv_philanfrom_crowd,Refer to the definition of inv_philanfrom_crowd,,,
+fu2-inv_philanfrom_nonowneremp,Refer to the definition of inv_philanfrom_nonowneremp,,,
+fu2-inv_philanfrom_otherinds,Refer to the definition of inv_philanfrom_otherinds,,,
+fu2-inv_philanfrom_anothersource,Refer to the definition of inv_philanfrom_anothersource,,,
+fu2-inv_philan_m1,Refer to the definition of inv_philan_m1,,,
+fu2-inv_plans_outequity_12months,Refer to the definition of inv_plans_outequity_12months,,,
+fu2-inv_plans_debt_12months,Refer to the definition of inv_plans_debt_12months,,,
+fu2-inv_plans_philan_12months,Refer to the definition of inv_plans_philan_12months,,,
+fu2-inv_plans_outequity_3years,Refer to the definition of inv_plans_outequity_3years,,,
+fu2-inv_plans_debt_3years,Refer to the definition of inv_plans_debt_3years,,,
+fu2-inv_plans_philan_3years,Refer to the definition of inv_plans_philan_3years,,,
+fu2-impact_area_water,Refer to the definition of impact_area_water,,,
+fu2-impact_area_educ,Refer to the definition of impact_area_educ,,,
+fu2-impact_area_energy,Refer to the definition of impact_area_energy,,,
+fu2-impact_area_finsrv,Refer to the definition of impact_area_finsrv,,,
+fu2-impact_area_information,Refer to the definition of impact_area_information,,,
+fu2-impact_area_housing,Refer to the definition of impact_area_housing,,,
+fu2-impact_area_agprod,Refer to the definition of impact_area_agprod,,,
+fu2-impact_area_biodiv,Refer to the definition of impact_area_biodiv,,,
+fu2-impact_area_capacity,Refer to the definition of impact_area_capacity,,,
+fu2-impact_area_commdev,Refer to the definition of impact_area_commdev,,,
+fu2-impact_area_conflres,Refer to the definition of impact_area_conflres,,,
+fu2-impact_area_disease,Refer to the definition of impact_area_disease,,,
+fu2-impact_area_employ,Refer to the definition of impact_area_employ,,,
+fu2-impact_area_fueleff,Refer to the definition of impact_area_fueleff,,,
+fu2-impact_area_equality,Refer to the definition of impact_area_equality,,,
+fu2-impact_area_food,Refer to the definition of impact_area_food,,,
+fu2-impact_area_charity,Refer to the definition of impact_area_charity,,,
+fu2-impact_area_health,Refer to the definition of impact_area_health,,,
+fu2-impact_area_humrights,Refer to the definition of impact_area_humrights,,,
+fu2-impact_area_incgrowth,Refer to the definition of impact_area_incgrowth,,,
+fu2-impact_area_natresources,Refer to the definition of impact_area_natresources,,,
+fu2-impact_area_natbio,Refer to the definition of impact_area_natbio,,,
+fu2-impact_area_wastemgt,Refer to the definition of impact_area_wastemgt,,,
+fu2-impact_area_efficiency,Refer to the definition of impact_area_efficiency,,,
+fu2-impact_area_sustenergy,Refer to the definition of impact_area_sustenergy,,,
+fu2-impact_area_landuse,Refer to the definition of impact_area_landuse,,,
+fu2-impact_area_highimpact,Refer to the definition of impact_area_highimpact,,,
+fu2-impact_area_watresmgmt,Refer to the definition of impact_area_watresmgmt,,,
+fu2-impact_area_womengirls,Refer to the definition of impact_area_womengirls,,,
+fu2-impact_area_other,Refer to the definition of impact_area_other,,,
+fu2-impact_use_iris,Refer to the definition of impact_use_iris,,,
+fu2-impact_use_blab_giirs,Refer to the definition of impact_use_blab_giirs,,,
+fu2-impact_use_othermeasure,Refer to the definition of impact_use_othermeasure,,,
+fu2-report_any_prior_accelerator,Refer to the definition of report_any_prior_accelerator,,,
+fu3-report_followup_yes,"Binary variable indicating the availability of third-year followup data (1 = Yes, 0 = No)",,,
+fu3-New_External_ID,Refer to the definition of New_External_ID,,,
+fu3-program_id,Refer to the definition of program_id,,,
+fu3-program_year,Refer to the definition of program_year,,,
+fu3-info_venture_country,Refer to the definition of info_venture_country,,,
+fu3-info_legal_status,Refer to the definition of info_legal_status,,,
+fu3-info_financial_goals,Refer to the definition of info_financial_goals,,,
+fu3-info_has_targetmargin,Refer to the definition of info_has_targetmargin,,,
+fu3-info_target_margin,Refer to the definition of info_target_margin,,,
+fu3-info_has_socialmotives,Refer to the definition of info_has_socialmotives,,,
+fu3-fins_revenues_m1,Refer to the definition of fins_revenues_m1,,,
+fu3-fins_profit_m1,Refer to the definition of fins_profit_m1,,,
+fu3-fins_ft_employees_m1,Refer to the definition of fins_ft_employees_m1,,,
+fu3-fins_pt_employees_m1,Refer to the definition of fins_pt_employees_m1,,,
+fu3-fins_wages_m1,Refer to the definition of fins_wages_m1,,,
+fu3-inv_ownmoney_m1,Refer to the definition of inv_ownmoney_m1,,,
+fu3-inv_equityfrom_spouses,Refer to the definition of inv_equityfrom_spouses,,,
+fu3-inv_equityfrom_banks,Refer to the definition of inv_equityfrom_banks,,,
+fu3-inv_equityfrom_nonbankfin,Refer to the definition of inv_equityfrom_nonbankfin,,,
+fu3-inv_equityfrom_parents,Refer to the definition of inv_equityfrom_parents,,,
+fu3-inv_equityfrom_angels,Refer to the definition of inv_equityfrom_angels,,,
+fu3-inv_equityfrom_companies,Refer to the definition of inv_equityfrom_companies,,,
+fu3-inv_equityfrom_govt,Refer to the definition of inv_equityfrom_govt,,,
+fu3-inv_equityfrom_venturecap,Refer to the definition of inv_equityfrom_venturecap,,,
+fu3-inv_equityfrom_na,Refer to the definition of inv_equityfrom_na,,,
+fu3-inv_equityfrom_nonprofits,Refer to the definition of inv_equityfrom_nonprofits,,,
+fu3-inv_equityfrom_accelerators,Refer to the definition of inv_equityfrom_accelerators,,,
+fu3-inv_equityfrom_friendsfamily,Refer to the definition of inv_equityfrom_friendsfamily,,,
+fu3-inv_equityfrom_bpcs,Refer to the definition of inv_equityfrom_bpcs,,,
+fu3-inv_equityfrom_crowd,Refer to the definition of inv_equityfrom_crowd,,,
+fu3-inv_equityfrom_nonowneremp,Refer to the definition of inv_equityfrom_nonowneremp,,,
+fu3-inv_equityfrom_otherinds,Refer to the definition of inv_equityfrom_otherinds,,,
+fu3-inv_equityfrom_other,Refer to the definition of inv_equityfrom_other,,,
+fu3-inv_outequity_m1,Refer to the definition of inv_outequity_m1,,,
+fu3-inv_debtfrom_banks,Refer to the definition of inv_debtfrom_banks,,,
+fu3-inv_debtfrom_nonbankfin,Refer to the definition of inv_debtfrom_nonbankfin,,,
+fu3-inv_debtfrom_venturecap,Refer to the definition of inv_debtfrom_venturecap,,,
+fu3-inv_debtfrom_angels,Refer to the definition of inv_debtfrom_angels,,,
+fu3-inv_debtfrom_govt,Refer to the definition of inv_debtfrom_govt,,,
+fu3-inv_debtfrom_companies,Refer to the definition of inv_debtfrom_companies,,,
+fu3-inv_debtfrom_nonprofits,Refer to the definition of inv_debtfrom_nonprofits,,,
+fu3-inv_debtfrom_accelerators,Refer to the definition of inv_debtfrom_accelerators,,,
+fu3-inv_debtfrom_family,Refer to the definition of inv_debtfrom_family,,,
+fu3-inv_debtfrom_friendsfamily,Refer to the definition of inv_debtfrom_friendsfamily,,,
+fu3-inv_debtfrom_bpcs,Refer to the definition of inv_debtfrom_bpcs,,,
+fu3-inv_debtfrom_crowd,Refer to the definition of inv_debtfrom_crowd,,,
+fu3-inv_debtfrom_nonowneremp,Refer to the definition of inv_debtfrom_nonowneremp,,,
+fu3-inv_debtfrom_otherinds,Refer to the definition of inv_debtfrom_otherinds,,,
+fu3-inv_debtfrom_other,Refer to the definition of inv_debtfrom_other,,,
+fu3-inv_totaldebt_m1,Refer to the definition of inv_totaldebt_m1,,,
+fu3-inv_philanfrom_companies,Refer to the definition of inv_philanfrom_companies,,,
+fu3-inv_philanfrom_govt,Refer to the definition of inv_philanfrom_govt,,,
+fu3-inv_philanfrom_nonprofits,Refer to the definition of inv_philanfrom_nonprofits,,,
+fu3-inv_philanfrom_accelerators,Refer to the definition of inv_philanfrom_accelerators,,,
+fu3-inv_philanfrom_friendsfamily,Refer to the definition of inv_philanfrom_friendsfamily,,,
+fu3-inv_philanfrom_bpcs,Refer to the definition of inv_philanfrom_bpcs,,,
+fu3-inv_philanfrom_crowd,Refer to the definition of inv_philanfrom_crowd,,,
+fu3-inv_philanfrom_nonowneremp,Refer to the definition of inv_philanfrom_nonowneremp,,,
+fu3-inv_philanfrom_otherinds,Refer to the definition of inv_philanfrom_otherinds,,,
+fu3-inv_philanfrom_anothersource,Refer to the definition of inv_philanfrom_anothersource,,,
+fu3-inv_philan_m1,Refer to the definition of inv_philan_m1,,,
+fu3-inv_plans_outequity_12months,Refer to the definition of inv_plans_outequity_12months,,,
+fu3-inv_plans_debt_12months,Refer to the definition of inv_plans_debt_12months,,,
+fu3-inv_plans_philan_12months,Refer to the definition of inv_plans_philan_12months,,,
+fu3-inv_plans_outequity_3years,Refer to the definition of inv_plans_outequity_3years,,,
+fu3-inv_plans_debt_3years,Refer to the definition of inv_plans_debt_3years,,,
+fu3-inv_plans_philan_3years,Refer to the definition of inv_plans_philan_3years,,,
+fu3-impact_area_water,Refer to the definition of impact_area_water,,,
+fu3-impact_area_educ,Refer to the definition of impact_area_educ,,,
+fu3-impact_area_energy,Refer to the definition of impact_area_energy,,,
+fu3-impact_area_finsrv,Refer to the definition of impact_area_finsrv,,,
+fu3-impact_area_information,Refer to the definition of impact_area_information,,,
+fu3-impact_area_housing,Refer to the definition of impact_area_housing,,,
+fu3-impact_area_agprod,Refer to the definition of impact_area_agprod,,,
+fu3-impact_area_biodiv,Refer to the definition of impact_area_biodiv,,,
+fu3-impact_area_capacity,Refer to the definition of impact_area_capacity,,,
+fu3-impact_area_commdev,Refer to the definition of impact_area_commdev,,,
+fu3-impact_area_conflres,Refer to the definition of impact_area_conflres,,,
+fu3-impact_area_disease,Refer to the definition of impact_area_disease,,,
+fu3-impact_area_employ,Refer to the definition of impact_area_employ,,,
+fu3-impact_area_fueleff,Refer to the definition of impact_area_fueleff,,,
+fu3-impact_area_equality,Refer to the definition of impact_area_equality,,,
+fu3-impact_area_food,Refer to the definition of impact_area_food,,,
+fu3-impact_area_charity,Refer to the definition of impact_area_charity,,,
+fu3-impact_area_health,Refer to the definition of impact_area_health,,,
+fu3-impact_area_humrights,Refer to the definition of impact_area_humrights,,,
+fu3-impact_area_incgrowth,Refer to the definition of impact_area_incgrowth,,,
+fu3-impact_area_natresources,Refer to the definition of impact_area_natresources,,,
+fu3-impact_area_natbio,Refer to the definition of impact_area_natbio,,,
+fu3-impact_area_wastemgt,Refer to the definition of impact_area_wastemgt,,,
+fu3-impact_area_efficiency,Refer to the definition of impact_area_efficiency,,,
+fu3-impact_area_sustenergy,Refer to the definition of impact_area_sustenergy,,,
+fu3-impact_area_landuse,Refer to the definition of impact_area_landuse,,,
+fu3-impact_area_highimpact,Refer to the definition of impact_area_highimpact,,,
+fu3-impact_area_watresmgmt,Refer to the definition of impact_area_watresmgmt,,,
+fu3-impact_area_womengirls,Refer to the definition of impact_area_womengirls,,,
+fu3-impact_area_other,Refer to the definition of impact_area_other,,,
+fu3-impact_use_iris,Refer to the definition of impact_use_iris,,,
+fu3-impact_use_blab_giirs,Refer to the definition of impact_use_blab_giirs,,,
+fu3-impact_use_othermeasure,Refer to the definition of impact_use_othermeasure,,,
+fu3-report_any_prior_accelerator,Refer to the definition of report_any_prior_accelerator,,,
+fu4-report_followup_yes,"Binary variable indicating the availability of fourth-year followup data (1 = Yes, 0 = No)",,,
+fu4-New_External_ID,Refer to the definition of New_External_ID,,,
+fu4-program_id,Refer to the definition of program_id,,,
+fu4-program_year,Refer to the definition of program_year,,,
+fu4-info_venture_country,Refer to the definition of info_venture_country,,,
+fu4-info_legal_status,Refer to the definition of info_legal_status,,,
+fu4-info_financial_goals,Refer to the definition of info_financial_goals,,,
+fu4-info_has_targetmargin,Refer to the definition of info_has_targetmargin,,,
+fu4-info_target_margin,Refer to the definition of info_target_margin,,,
+fu4-info_has_socialmotives,Refer to the definition of info_has_socialmotives,,,
+fu4-fins_revenues_m1,Refer to the definition of fins_revenues_m1,,,
+fu4-fins_profit_m1,Refer to the definition of fins_profit_m1,,,
+fu4-fins_ft_employees_m1,Refer to the definition of fins_ft_employees_m1,,,
+fu4-fins_pt_employees_m1,Refer to the definition of fins_pt_employees_m1,,,
+fu4-fins_wages_m1,Refer to the definition of fins_wages_m1,,,
+fu4-inv_ownmoney_m1,Refer to the definition of inv_ownmoney_m1,,,
+fu4-inv_equityfrom_spouses,Refer to the definition of inv_equityfrom_spouses,,,
+fu4-inv_equityfrom_banks,Refer to the definition of inv_equityfrom_banks,,,
+fu4-inv_equityfrom_nonbankfin,Refer to the definition of inv_equityfrom_nonbankfin,,,
+fu4-inv_equityfrom_parents,Refer to the definition of inv_equityfrom_parents,,,
+fu4-inv_equityfrom_angels,Refer to the definition of inv_equityfrom_angels,,,
+fu4-inv_equityfrom_companies,Refer to the definition of inv_equityfrom_companies,,,
+fu4-inv_equityfrom_govt,Refer to the definition of inv_equityfrom_govt,,,
+fu4-inv_equityfrom_venturecap,Refer to the definition of inv_equityfrom_venturecap,,,
+fu4-inv_equityfrom_na,Refer to the definition of inv_equityfrom_na,,,
+fu4-inv_equityfrom_nonprofits,Refer to the definition of inv_equityfrom_nonprofits,,,
+fu4-inv_equityfrom_accelerators,Refer to the definition of inv_equityfrom_accelerators,,,
+fu4-inv_equityfrom_friendsfamily,Refer to the definition of inv_equityfrom_friendsfamily,,,
+fu4-inv_equityfrom_bpcs,Refer to the definition of inv_equityfrom_bpcs,,,
+fu4-inv_equityfrom_crowd,Refer to the definition of inv_equityfrom_crowd,,,
+fu4-inv_equityfrom_nonowneremp,Refer to the definition of inv_equityfrom_nonowneremp,,,
+fu4-inv_equityfrom_otherinds,Refer to the definition of inv_equityfrom_otherinds,,,
+fu4-inv_equityfrom_other,Refer to the definition of inv_equityfrom_other,,,
+fu4-inv_outequity_m1,Refer to the definition of inv_outequity_m1,,,
+fu4-inv_debtfrom_banks,Refer to the definition of inv_debtfrom_banks,,,
+fu4-inv_debtfrom_nonbankfin,Refer to the definition of inv_debtfrom_nonbankfin,,,
+fu4-inv_debtfrom_venturecap,Refer to the definition of inv_debtfrom_venturecap,,,
+fu4-inv_debtfrom_angels,Refer to the definition of inv_debtfrom_angels,,,
+fu4-inv_debtfrom_govt,Refer to the definition of inv_debtfrom_govt,,,
+fu4-inv_debtfrom_companies,Refer to the definition of inv_debtfrom_companies,,,
+fu4-inv_debtfrom_nonprofits,Refer to the definition of inv_debtfrom_nonprofits,,,
+fu4-inv_debtfrom_accelerators,Refer to the definition of inv_debtfrom_accelerators,,,
+fu4-inv_debtfrom_family,Refer to the definition of inv_debtfrom_family,,,
+fu4-inv_debtfrom_friendsfamily,Refer to the definition of inv_debtfrom_friendsfamily,,,
+fu4-inv_debtfrom_bpcs,Refer to the definition of inv_debtfrom_bpcs,,,
+fu4-inv_debtfrom_crowd,Refer to the definition of inv_debtfrom_crowd,,,
+fu4-inv_debtfrom_nonowneremp,Refer to the definition of inv_debtfrom_nonowneremp,,,
+fu4-inv_debtfrom_otherinds,Refer to the definition of inv_debtfrom_otherinds,,,
+fu4-inv_debtfrom_other,Refer to the definition of inv_debtfrom_other,,,
+fu4-inv_totaldebt_m1,Refer to the definition of inv_totaldebt_m1,,,
+fu4-inv_philanfrom_companies,Refer to the definition of inv_philanfrom_companies,,,
+fu4-inv_philanfrom_govt,Refer to the definition of inv_philanfrom_govt,,,
+fu4-inv_philanfrom_nonprofits,Refer to the definition of inv_philanfrom_nonprofits,,,
+fu4-inv_philanfrom_accelerators,Refer to the definition of inv_philanfrom_accelerators,,,
+fu4-inv_philanfrom_friendsfamily,Refer to the definition of inv_philanfrom_friendsfamily,,,
+fu4-inv_philanfrom_bpcs,Refer to the definition of inv_philanfrom_bpcs,,,
+fu4-inv_philanfrom_crowd,Refer to the definition of inv_philanfrom_crowd,,,
+fu4-inv_philanfrom_nonowneremp,Refer to the definition of inv_philanfrom_nonowneremp,,,
+fu4-inv_philanfrom_otherinds,Refer to the definition of inv_philanfrom_otherinds,,,
+fu4-inv_philanfrom_anothersource,Refer to the definition of inv_philanfrom_anothersource,,,
+fu4-inv_philan_m1,Refer to the definition of inv_philan_m1,,,
+fu4-inv_plans_outequity_12months,Refer to the definition of inv_plans_outequity_12months,,,
+fu4-inv_plans_debt_12months,Refer to the definition of inv_plans_debt_12months,,,
+fu4-inv_plans_philan_12months,Refer to the definition of inv_plans_philan_12months,,,
+fu4-inv_plans_outequity_3years,Refer to the definition of inv_plans_outequity_3years,,,
+fu4-inv_plans_debt_3years,Refer to the definition of inv_plans_debt_3years,,,
+fu4-inv_plans_philan_3years,Refer to the definition of inv_plans_philan_3years,,,
+fu4-impact_area_water,Refer to the definition of impact_area_water,,,
+fu4-impact_area_educ,Refer to the definition of impact_area_educ,,,
+fu4-impact_area_energy,Refer to the definition of impact_area_energy,,,
+fu4-impact_area_finsrv,Refer to the definition of impact_area_finsrv,,,
+fu4-impact_area_information,Refer to the definition of impact_area_information,,,
+fu4-impact_area_housing,Refer to the definition of impact_area_housing,,,
+fu4-impact_area_agprod,Refer to the definition of impact_area_agprod,,,
+fu4-impact_area_biodiv,Refer to the definition of impact_area_biodiv,,,
+fu4-impact_area_capacity,Refer to the definition of impact_area_capacity,,,
+fu4-impact_area_commdev,Refer to the definition of impact_area_commdev,,,
+fu4-impact_area_conflres,Refer to the definition of impact_area_conflres,,,
+fu4-impact_area_disease,Refer to the definition of impact_area_disease,,,
+fu4-impact_area_employ,Refer to the definition of impact_area_employ,,,
+fu4-impact_area_fueleff,Refer to the definition of impact_area_fueleff,,,
+fu4-impact_area_equality,Refer to the definition of impact_area_equality,,,
+fu4-impact_area_food,Refer to the definition of impact_area_food,,,
+fu4-impact_area_charity,Refer to the definition of impact_area_charity,,,
+fu4-impact_area_health,Refer to the definition of impact_area_health,,,
+fu4-impact_area_humrights,Refer to the definition of impact_area_humrights,,,
+fu4-impact_area_incgrowth,Refer to the definition of impact_area_incgrowth,,,
+fu4-impact_area_natresources,Refer to the definition of impact_area_natresources,,,
+fu4-impact_area_natbio,Refer to the definition of impact_area_natbio,,,
+fu4-impact_area_wastemgt,Refer to the definition of impact_area_wastemgt,,,
+fu4-impact_area_efficiency,Refer to the definition of impact_area_efficiency,,,
+fu4-impact_area_sustenergy,Refer to the definition of impact_area_sustenergy,,,
+fu4-impact_area_landuse,Refer to the definition of impact_area_landuse,,,
+fu4-impact_area_highimpact,Refer to the definition of impact_area_highimpact,,,
+fu4-impact_area_watresmgmt,Refer to the definition of impact_area_watresmgmt,,,
+fu4-impact_area_womengirls,Refer to the definition of impact_area_womengirls,,,
+fu4-impact_area_other,Refer to the definition of impact_area_other,,,
+fu4-impact_use_iris,Refer to the definition of impact_use_iris,,,
+fu4-impact_use_blab_giirs,Refer to the definition of impact_use_blab_giirs,,,
+fu4-impact_use_othermeasure,Refer to the definition of impact_use_othermeasure,,,
+fu4-report_any_prior_accelerator,Refer to the definition of report_any_prior_accelerator,,,
