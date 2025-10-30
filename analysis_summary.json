@@ -1,0 +1,195 @@
+{
+  "full_n": 23364,
+  "analysis_n": 9567,
+  "ols_rev_coef": 0.494,
+  "ols_rev_se": 0.104,
+  "ols_ft_coef": 0.073,
+  "ols_ft_se": 0.022,
+  "psm_pairs": 678,
+  "psm_att_rev": 0.199,
+  "psm_att_ft": 0.0,
+  "ipw_coef": 0.4989,
+  "ipw_se": 0.1101,
+  "region_effects": [
+    [
+      "North America",
+      0.449992,
+      56.829918,
+      0.01606659
+    ],
+    [
+      "Latin America & Caribbean",
+      0.589101,
+      80.23666,
+      0.0009369412
+    ],
+    [
+      "Sub-Saharan Africa",
+      0.204172,
+      22.650927,
+      0.4223695
+    ],
+    [
+      "South Asia",
+      1.797327,
+      503.349925,
+      1.727189e-09
+    ],
+    [
+      "Europe & Central Asia",
+      0.702589,
+      101.897385,
+      0.4712743
+    ],
+    [
+      "Middle East & North Africa",
+      -1.649742,
+      -80.790062,
+      0.1577482
+    ],
+    [
+      "East Asia & Pacific",
+      -0.015986,
+      -1.585842,
+      0.9822529
+    ]
+  ],
+  "sector_effects": [
+    [
+      "Health",
+      0.898213,
+      145.521206,
+      0.005026
+    ],
+    [
+      "Education",
+      0.536479,
+      70.997549,
+      0.041644
+    ],
+    [
+      "Agriculture",
+      0.223179,
+      25.004468,
+      0.345201
+    ],
+    [
+      "Other",
+      0.314727,
+      36.988474,
+      0.144799
+    ],
+    [
+      "Financial services",
+      0.46228,
+      58.768944,
+      0.28339
+    ],
+    [
+      "Information and communication technologies",
+      0.814509,
+      125.806682,
+      0.021815
+    ],
+    [
+      "Environment",
+      0.666537,
+      94.748156,
+      0.04794
+    ],
+    [
+      "Other / Niche",
+      0.559092,
+      74.908323,
+      0.012658
+    ]
+  ],
+  "funding_stats": [
+    [
+      "Mixed",
+      "No",
+      15.720858895705522,
+      2608
+    ],
+    [
+      "Mixed",
+      "Yes",
+      17.61546723952739,
+      931
+    ]
+  ],
+  "attr_region": {
+    "Latin America & Caribbean": 0.3692263279445728,
+    "North America": 0.45562954932631256,
+    "Other": 0.3136094674556213,
+    "South Asia": 0.36220472440944884,
+    "Sub-Saharan Africa": 0.48955517326124354
+  },
+  "attr_sector": {
+    "Agriculture": 0.5,
+    "Artisanal": 0.45359019264448336,
+    "Culture": 0.334841628959276,
+    "Education": 0.40260492040520984,
+    "Energy": 0.5057833859095688,
+    "Environment": 0.4722222222222222,
+    "Financial services": 0.3686635944700461,
+    "Health": 0.41520943472956484,
+    "Housing development": 0.4755244755244755,
+    "Information and communication technologies": 0.3125581395348837,
+    "Infrastructure/facilities development": 0.43537414965986393,
+    "Other": 0.3773330335057342,
+    "Supply chain services": 0.3498964803312629,
+    "Technical assistance services": 0.3779527559055118,
+    "Tourism": 0.3925925925925926,
+    "Water": 0.44571428571428573
+  },
+  "pre_smd": {
+    "log_revenue_m1": 0.22262786510928925,
+    "log_ft_employees_m1": 0.13419690771364445,
+    "years_since_founding": 0.10901387476514068,
+    "digital_score": 0.11438595972659156,
+    "impact_intensity": -0.024328271266702492,
+    "has_ip": 0.00886413693248288
+  },
+  "post_smd": {
+    "log_revenue_m1": 0.022562865107667657,
+    "log_ft_employees_m1": 0.039409673508831435,
+    "years_since_founding": -0.027061846936166742,
+    "digital_score": -0.0025574273410185256,
+    "impact_intensity": 0.027480095443023603,
+    "has_ip": 0.07198582380585751
+  },
+  "corr": {
+    "log_revenue_m1": {
+      "log_revenue_m1": 1.0,
+      "log_ft_employees_m1": 0.5164450274086203,
+      "digital_score": 0.16711067684131428,
+      "impact_intensity": 0.04387640129263245
+    },
+    "log_ft_employees_m1": {
+      "log_revenue_m1": 0.5164450274086203,
+      "log_ft_employees_m1": 1.0,
+      "digital_score": 0.09116213360743945,
+      "impact_intensity": 0.042766418221898306
+    },
+    "digital_score": {
+      "log_revenue_m1": 0.16711067684131428,
+      "log_ft_employees_m1": 0.09116213360743945,
+      "digital_score": 1.0,
+      "impact_intensity": -0.03892734374973304
+    },
+    "impact_intensity": {
+      "log_revenue_m1": 0.04387640129263245,
+      "log_ft_employees_m1": 0.042766418221898306,
+      "digital_score": -0.03892734374973304,
+      "impact_intensity": 1.0
+    }
+  },
+  "ols_rev_pct": 63.88585607937585,
+  "ols_ft_pct": 7.573053691470344,
+  "psm_rev_pct": 22.018196589987248,
+  "psm_ft_pct": 0.0,
+  "ipw_pct": 64.69086744130861,
+  "analysis_participated": 2451,
+  "analysis_non_participated": 7116
+}
